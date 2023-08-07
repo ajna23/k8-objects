@@ -1,7 +1,10 @@
 pipeline {
   agent { label "slave1"}
   stages {
-    steps('create a dir')
-    sh mkdir /tmp/testdir22
-  }
-}  
+    stage('create a dir')
+      steps { 
+        sh 'mkdir /tmp/testdir'
+      }
+   }   
+}
+
